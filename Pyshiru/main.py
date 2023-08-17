@@ -20,10 +20,40 @@ class Person():
     def run(self):
         print("i'm running")
 
-print(Person.age)
+#print(Person.age)
 
 person_one = Person("Jhon", "Colombiano")
-person_one.run()
+#person_one.run()
+
+########################################################################
+
+class Chamo():
+    def __init__(self):
+        pass
+    def despedir(self):
+        print("te despido")
+    @classmethod
+    def saludar( cls, nombre ):
+        print("Te saludo desde mi metodo de clase, mi nombre es", nombre )
+
+
+Chamo.saludar("Brian")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
