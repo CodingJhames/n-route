@@ -37,7 +37,37 @@ class Chamo():
         print("Te saludo desde mi metodo de clase, mi nombre es", nombre )
 
 
-Chamo.saludar("Brian")
+#Chamo.saludar("Brian")
+
+#################################################################################
+
+class People():
+    def __init__(self):
+        pass
+
+    def jump(self):
+        print("I'm jumping")
+
+    @classmethod
+    def correr(cls):
+        print("Estoy corriendo")
+
+    @staticmethod
+    def nadar():
+        print("estoy nadando...")
+
+pedro = People()
+pedro.nadar()
+
+
+
+
+
+
+
+
+
+
 
 
 
