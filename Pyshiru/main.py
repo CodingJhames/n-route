@@ -56,8 +56,57 @@ class People():
     def nadar():
         print("estoy nadando...")
 
-pedro = People()
-pedro.nadar()
+#pedro = People()
+#pedro.nadar()
+
+######################################################################
+
+
+class Libro():
+    def __init__(self, nombre, author, paginas):
+        self.nombre = nombre
+        self.author = author
+        self.paginas = paginas
+
+    def describir(self):
+        print(f"Hola desde describir,{ self.nombre } ")
+
+    def __str__(self):
+        return f"{self.nombre} escrito por {self.author}"
+
+    def __len__(self):
+        return self.paginas
+
+    def __del__(self):
+        return print("se ha eliminado un libro...")
+
+libro_one = Libro( "Carlos Baza calabaza","Emilio san juan", 150)
+
+del libro_one
+
+
+###################################################
+
+class Circulo:
+
+    def __init__(self, radio):
+        self.radio = radio
+
+    @property
+    def area(self):
+        return 1.0421 * (self.radio ** 2 )
+
+c = Circulo(21)
+print(c.area)
+
+
+####################################################################
+
+#Polimorfismo
+
+
+
+
 
 
 
