@@ -127,7 +127,63 @@ print('---------------------------------------------------')
 mover(perro)
 mover(perico)
 
+#####################################################################
 
+#protecccion
+
+
+class Intro():
+    def __init__(self, valor):
+        self.valor = valor
+
+    def segundo(self):
+        print('Segundo')
+
+    def tercero(self):
+        print('tercero')
+
+class Pepe():
+    def saludar(self):
+        print("hola soy Pepe")
+
+pepe_one = Pepe()
+
+dato = Intro('valor')
+#print(dir(dato))
+
+#print( isinstance(dato, Pepe) )
+print( hasattr( dato, 'pepe'))
+
+print('-------------------------------------------------------------')
+
+####################################################################
+#abstraccion
+
+class Lavadora():
+    def __init__(self):
+        pass
+
+    def lavar(self, temp='caliente'):
+        self._llenar_taque(temp)
+        self._aniadir_jabon()
+        self._lavar()
+        self._centrifugar()
+
+    def _llenar_taque(self, temp):
+        print(f"llenando el tanque con agua {temp}")
+
+    def _aniadir_jabon(self):
+        print('Aádiendo jabón')
+
+    def _lavar(self):
+        print('Lavando...')
+
+    def _centrifugar(self):
+        print('Centrifugando la ropa..')
+
+if __name__ == '__main__':
+    lavadora = Lavadora()
+    lavadora.lavar()
 
 
 
