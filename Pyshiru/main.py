@@ -104,7 +104,28 @@ print(c.area)
 
 #Polimorfismo
 
+class Perro():
+    def avanzar(self):
+        print("tengo 4 patas")
 
+class Perico():
+    def avanzar(self):
+        print("volar")
+
+
+def mover(animal):
+    animal.avanzar()
+
+perro = Perro()
+perro.avanzar()
+
+perico = Perico()
+perico.avanzar()
+
+print('---------------------------------------------------')
+
+mover(perro)
+mover(perico)
 
 
 
