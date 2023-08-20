@@ -185,6 +185,60 @@ if __name__ == '__main__':
     lavadora = Lavadora()
     lavadora.lavar()
 
+#################################################################################################
+#Herencia
+
+class Personal:
+    def __init__(self, antiguedad, especialidad ):
+        self.antiguedad = antiguedad
+        self.especialidad = especialidad
+
+    def Sueldo(self):
+        if( self.especialidad == 'BF'):
+            return 10 * self.antiguedad
+        else:
+            return 15 * self.antiguedad
+
+class Supervirsor( Personal ):
+    def __init__(self, cargo ):
+        super().__init__(5,cargo)
+
+class Operador(Personal):
+    def __init__(self, cargo):
+        super().__init__(2,cargo)
+
+if __name__ == '__main__':
+    personal_one = Personal(10,'Jefe de Desarrollo')
+    #print( f'Sueldo del personal {personal_one.Sueldo()}' )
+
+    suervisor_one = Supervirsor('BF')
+    #print( f'El sueldo del supervisor {suervisor_one.Sueldo()}')
+
+    operador_one = Operador('Programador')
+    #print( f'El sueldo del operador {operador_one.Sueldo()}')
+
+
+####################################################################
+
+lista = [1,2,3]
+
+try:
+    print(lista[1])
+except IndexError:
+    print("Error: en el indice")
+else:
+    print('No hay ningùn error')
+finally:
+    print('se ejecutó el script correctamente')
+
+
+
+
+
+
+
+
+
 
 
 
