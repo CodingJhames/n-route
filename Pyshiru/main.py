@@ -231,6 +231,26 @@ else:
 finally:
     print('se ejecutó el script correctamente')
 
+try:
+    raise TypeError
+except:
+    print('Error con los tipos de datos' )
+
+###################################################################
+
+#Custom exceptions
+
+class Err( Exception ):
+    def __init__(self, value ):
+        print(f'Se causó un error por: {value}')
+
+try:
+    raise Err(2)
+except Err:
+    print('Error escrito')
+
+
+
 
 
 
