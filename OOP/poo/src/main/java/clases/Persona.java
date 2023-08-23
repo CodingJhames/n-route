@@ -1,20 +1,30 @@
-package OOP;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package clases;
 
-class Persona {
-    //atributes
+/**
+ *
+ * @author james
+ */
+public class Persona {
+    
+     //atributes
     String nombre;
     int edad;
     char genero;
     
     // constructor
     Persona(){
-        System.out.println("Esto es un constructor");
+        System.out.println("constructor por defecto");
     }
 
-    Persona(String n, int ed, char g){
-        nombre = n;
-        edad = ed;
-        genero = g;
+    Persona(String nombre, int edad, char genero){
+        this();
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
     }
     
     //methods
@@ -32,16 +42,11 @@ class Persona {
     public static void main(String args[]) {
         Persona p = new Persona("James",30,'M');
         p.imprimirInfo();
-
-        Persona p_one = new Persona();
-        p_one.nombre = "Parchita";
-        p_one.edad = 4;
-        p_one.genero = 'F';
+        System.out.println();
+        Persona p_one = new Persona("Parchita",4,'F');
         p_one.imprimirInfo();
 
         p.jugarVideojuegos(p_one);
     }
-
+    
 }
-
-
