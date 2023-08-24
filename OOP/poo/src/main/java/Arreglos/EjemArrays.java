@@ -26,6 +26,19 @@ public class EjemArrays {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
+        
+        int i = 0;
+        
+        while( i < array.length ){
+            System.out.println(array[i]);
+            i++;
+        }
+        
+        for (int temp:array ) {
+            System.out.println(temp);
+        }
+        
+        
     }
     
 }
